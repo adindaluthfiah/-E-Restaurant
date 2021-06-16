@@ -119,7 +119,7 @@ namespace edToast
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Environment.Exit(0);
         }
 
         private void btnAdmin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
