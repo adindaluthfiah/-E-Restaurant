@@ -24,5 +24,6 @@ MENGUBAH CONFIGURASI
    ![image](https://user-images.githubusercontent.com/79047677/122405871-99673580-cfaa-11eb-81f2-ce0cbb3d237e.png)
 3. Contohnya untuk laptop saya connection string dapat ditulis seperti ini :
    ![image](https://user-images.githubusercontent.com/79047677/122406061-c3205c80-cfaa-11eb-9f1a-9f25afa81dcf.png)
+4. Sekarang, program sudah siap dijalankan
 
 
