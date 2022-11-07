@@ -270,3 +270,4 @@ D:\SEMESTER 5\Junior Project\E-Restaurant\E-Restaurant\eRestaurant\obj\Debug\eRe
 D:\SEMESTER 5\Junior Project\E-Restaurant\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.csproj.CopyComplete
 D:\SEMESTER 5\Junior Project\E-Restaurant\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.exe
 D:\SEMESTER 5\Junior Project\E-Restaurant\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.pdb
+D:\SEMESTER 5\Junior Project\E-Restaurant\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.exe.config
