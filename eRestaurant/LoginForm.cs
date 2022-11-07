@@ -19,7 +19,7 @@ namespace eRestaurant
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(tbUserName.Text == "adminRest" && tbPassword.Text == "servicewithlove")
+            if(tbUserName.Text == "adminRest" && tbPassword.Text == "123")
             {
                 Admin admin = new Admin();
                 this.Hide();

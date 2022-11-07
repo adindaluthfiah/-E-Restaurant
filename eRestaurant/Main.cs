@@ -17,7 +17,7 @@ namespace eRestaurant
             InitializeComponent();
         }
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e_rest";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=082002;Database=e-Rest";
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;

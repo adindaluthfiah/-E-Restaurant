@@ -33,14 +33,7 @@ namespace eRestaurant
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.DataGridView = new Guna.UI.WinForms.GunaDataGridView();
-            this.noPesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scrambleToastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.baconDoubleCTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avoToastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shrimpToastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvData = new Guna.UI.WinForms.GunaDataGridView();
             this.tabelMenuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet = new eRestaurant.DataSet();
             this.tabelMenuTableAdapter = new eRestaurant.DataSetTableAdapters.tabelMenuTableAdapter();
@@ -51,27 +44,34 @@ namespace eRestaurant
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnEdit = new Guna.UI.WinForms.GunaAdvenceButton();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
+            this.noPesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scrambleToastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baconDoubleCTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avoToastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shrimpToastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabelMenuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataGridView
+            // dgvData
             // 
-            this.DataGridView.AllowUserToAddRows = false;
-            this.DataGridView.AllowUserToResizeColumns = false;
-            this.DataGridView.AllowUserToResizeRows = false;
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToResizeColumns = false;
+            this.dgvData.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridView.AutoGenerateColumns = false;
-            this.DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridView.BackgroundColor = System.Drawing.Color.White;
-            this.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvData.AutoGenerateColumns = false;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvData.BackgroundColor = System.Drawing.Color.White;
+            this.dgvData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(105)))), ((int)(((byte)(179)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
@@ -79,9 +79,9 @@ namespace eRestaurant
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridView.ColumnHeadersHeight = 66;
-            this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvData.ColumnHeadersHeight = 66;
+            this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noPesananDataGridViewTextBoxColumn,
             this.namaDataGridViewTextBoxColumn,
             this.scrambleToastDataGridViewTextBoxColumn,
@@ -89,7 +89,7 @@ namespace eRestaurant
             this.avoToastDataGridViewTextBoxColumn,
             this.shrimpToastDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn});
-            this.DataGridView.DataSource = this.tabelMenuBindingSource;
+            this.dgvData.DataSource = this.tabelMenuBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,97 +97,42 @@ namespace eRestaurant
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(33)))), ((int)(((byte)(56)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridView.EnableHeadersVisualStyles = false;
-            this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
-            this.DataGridView.Location = new System.Drawing.Point(12, 154);
-            this.DataGridView.Name = "DataGridView";
-            this.DataGridView.ReadOnly = true;
-            this.DataGridView.RowHeadersVisible = false;
-            this.DataGridView.RowHeadersWidth = 62;
-            this.DataGridView.RowTemplate.Height = 28;
-            this.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView.Size = new System.Drawing.Size(1285, 446);
-            this.DataGridView.TabIndex = 0;
-            this.DataGridView.Tag = "149, 105, 179";
-            this.DataGridView.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.DeepPurple;
-            this.DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
-            this.DataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
-            this.DataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(105)))), ((int)(((byte)(179)))));
-            this.DataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.DataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridView.ThemeStyle.HeaderStyle.Height = 66;
-            this.DataGridView.ThemeStyle.ReadOnly = true;
-            this.DataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
-            this.DataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(33)))), ((int)(((byte)(56)))));
-            this.DataGridView.ThemeStyle.RowsStyle.Height = 28;
-            this.DataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
-            this.DataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(33)))), ((int)(((byte)(56)))));
-            // 
-            // noPesananDataGridViewTextBoxColumn
-            // 
-            this.noPesananDataGridViewTextBoxColumn.DataPropertyName = "No_Pesanan";
-            this.noPesananDataGridViewTextBoxColumn.HeaderText = "No Pesanan";
-            this.noPesananDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.noPesananDataGridViewTextBoxColumn.Name = "noPesananDataGridViewTextBoxColumn";
-            this.noPesananDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // namaDataGridViewTextBoxColumn
-            // 
-            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
-            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
-            this.namaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
-            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // scrambleToastDataGridViewTextBoxColumn
-            // 
-            this.scrambleToastDataGridViewTextBoxColumn.DataPropertyName = "Scramble_Toast";
-            this.scrambleToastDataGridViewTextBoxColumn.HeaderText = "Scramble Toast";
-            this.scrambleToastDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.scrambleToastDataGridViewTextBoxColumn.Name = "scrambleToastDataGridViewTextBoxColumn";
-            this.scrambleToastDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // baconDoubleCTDataGridViewTextBoxColumn
-            // 
-            this.baconDoubleCTDataGridViewTextBoxColumn.DataPropertyName = "Bacon_DoubleCT";
-            this.baconDoubleCTDataGridViewTextBoxColumn.HeaderText = "Bacon DoubleCT";
-            this.baconDoubleCTDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.baconDoubleCTDataGridViewTextBoxColumn.Name = "baconDoubleCTDataGridViewTextBoxColumn";
-            this.baconDoubleCTDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // avoToastDataGridViewTextBoxColumn
-            // 
-            this.avoToastDataGridViewTextBoxColumn.DataPropertyName = "Avo_Toast";
-            this.avoToastDataGridViewTextBoxColumn.HeaderText = "Avo Toast";
-            this.avoToastDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.avoToastDataGridViewTextBoxColumn.Name = "avoToastDataGridViewTextBoxColumn";
-            this.avoToastDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // shrimpToastDataGridViewTextBoxColumn
-            // 
-            this.shrimpToastDataGridViewTextBoxColumn.DataPropertyName = "Shrimp_Toast";
-            this.shrimpToastDataGridViewTextBoxColumn.HeaderText = "Shrimp Toast";
-            this.shrimpToastDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.shrimpToastDataGridViewTextBoxColumn.Name = "shrimpToastDataGridViewTextBoxColumn";
-            this.shrimpToastDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvData.EnableHeadersVisualStyles = false;
+            this.dgvData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
+            this.dgvData.Location = new System.Drawing.Point(12, 154);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.RowHeadersVisible = false;
+            this.dgvData.RowHeadersWidth = 62;
+            this.dgvData.RowTemplate.Height = 28;
+            this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvData.Size = new System.Drawing.Size(1285, 446);
+            this.dgvData.TabIndex = 0;
+            this.dgvData.Tag = "149, 105, 179";
+            this.dgvData.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.DeepPurple;
+            this.dgvData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
+            this.dgvData.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvData.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
+            this.dgvData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(105)))), ((int)(((byte)(179)))));
+            this.dgvData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvData.ThemeStyle.HeaderStyle.Height = 66;
+            this.dgvData.ThemeStyle.ReadOnly = true;
+            this.dgvData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
+            this.dgvData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(33)))), ((int)(((byte)(56)))));
+            this.dgvData.ThemeStyle.RowsStyle.Height = 28;
+            this.dgvData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
+            this.dgvData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(33)))), ((int)(((byte)(56)))));
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellContentClick);
             // 
             // tabelMenuBindingSource
             // 
@@ -302,6 +247,7 @@ namespace eRestaurant
             this.btnDelete.TabIndex = 45;
             this.btnDelete.Text = "Delete Order";
             this.btnDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -338,6 +284,62 @@ namespace eRestaurant
             this.btnEdit.Text = "Edit Order";
             this.btnEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // noPesananDataGridViewTextBoxColumn
+            // 
+            this.noPesananDataGridViewTextBoxColumn.DataPropertyName = "No_Pesanan";
+            this.noPesananDataGridViewTextBoxColumn.HeaderText = "No_Pesanan";
+            this.noPesananDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.noPesananDataGridViewTextBoxColumn.Name = "noPesananDataGridViewTextBoxColumn";
+            this.noPesananDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // namaDataGridViewTextBoxColumn
+            // 
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            this.namaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // scrambleToastDataGridViewTextBoxColumn
+            // 
+            this.scrambleToastDataGridViewTextBoxColumn.DataPropertyName = "Scramble_Toast";
+            this.scrambleToastDataGridViewTextBoxColumn.HeaderText = "Scramble_Toast";
+            this.scrambleToastDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.scrambleToastDataGridViewTextBoxColumn.Name = "scrambleToastDataGridViewTextBoxColumn";
+            this.scrambleToastDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // baconDoubleCTDataGridViewTextBoxColumn
+            // 
+            this.baconDoubleCTDataGridViewTextBoxColumn.DataPropertyName = "Bacon_DoubleCT";
+            this.baconDoubleCTDataGridViewTextBoxColumn.HeaderText = "Bacon_DoubleCT";
+            this.baconDoubleCTDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.baconDoubleCTDataGridViewTextBoxColumn.Name = "baconDoubleCTDataGridViewTextBoxColumn";
+            this.baconDoubleCTDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // avoToastDataGridViewTextBoxColumn
+            // 
+            this.avoToastDataGridViewTextBoxColumn.DataPropertyName = "Avo_Toast";
+            this.avoToastDataGridViewTextBoxColumn.HeaderText = "Avo_Toast";
+            this.avoToastDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.avoToastDataGridViewTextBoxColumn.Name = "avoToastDataGridViewTextBoxColumn";
+            this.avoToastDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // shrimpToastDataGridViewTextBoxColumn
+            // 
+            this.shrimpToastDataGridViewTextBoxColumn.DataPropertyName = "Shrimp_Toast";
+            this.shrimpToastDataGridViewTextBoxColumn.HeaderText = "Shrimp_Toast";
+            this.shrimpToastDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.shrimpToastDataGridViewTextBoxColumn.Name = "shrimpToastDataGridViewTextBoxColumn";
+            this.shrimpToastDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -351,14 +353,14 @@ namespace eRestaurant
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.DataGridView);
+            this.Controls.Add(this.dgvData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Admin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabelMenuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
@@ -368,7 +370,7 @@ namespace eRestaurant
 
         #endregion
 
-        private Guna.UI.WinForms.GunaDataGridView DataGridView;
+        private Guna.UI.WinForms.GunaDataGridView dgvData;
         private DataSet dataSet;
         private System.Windows.Forms.BindingSource tabelMenuBindingSource;
         private DataSetTableAdapters.tabelMenuTableAdapter tabelMenuTableAdapter;
@@ -377,6 +379,8 @@ namespace eRestaurant
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaAdvenceButton btnDelete;
+        private Guna.UI.WinForms.GunaAdvenceButton btnEdit;
         private System.Windows.Forms.DataGridViewTextBoxColumn noPesananDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn scrambleToastDataGridViewTextBoxColumn;
@@ -384,7 +388,5 @@ namespace eRestaurant
         private System.Windows.Forms.DataGridViewTextBoxColumn avoToastDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn shrimpToastDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
-        private Guna.UI.WinForms.GunaAdvenceButton btnDelete;
-        private Guna.UI.WinForms.GunaAdvenceButton btnEdit;
     }
 }
