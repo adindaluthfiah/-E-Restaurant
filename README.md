@@ -5,4 +5,4 @@
 Ketua Kelompok : Maria Anastasia Tambunan - 20/460551/TK/511
 
 - Anggota 1 : Adinda Luthfiah S - 20/463587/TK/51579
-- Anggota 2 : Wardatul Radhiyyah - 20/456381/TK/50511
+- Anggota 2 : Wardatul Radhiyyah  20/456381/TK/50511
