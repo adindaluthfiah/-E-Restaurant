@@ -1,13 +1,19 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace eRestaurant
 {
     class Data
     {
+        public NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e_rest");
+        public string sql = null;
+
         private static string _nama;
         private static string _noPesanan;
         private static string _pesan1;

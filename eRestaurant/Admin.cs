@@ -11,23 +11,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Microsoft.VisualBasic.Devices;
+using Microsoft.ReportingServices.Diagnostics.Internal;
 
 namespace eRestaurant
 {
     public partial class Admin : Form
     {
-        private NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=082002;Database=e-Rest");
-        public DataTable dt;
-        public static NpgsqlCommand cmd;
-        private string sql = null;
+        Data connect = new Data();
         private DataGridViewRow r;
-
+        private DataTable dt;
+        public static NpgsqlCommand cmd;
         public Admin()
         {
             InitializeComponent();
+            Data connection2 = new Data();
         }
-
-        //DataTable dt = new DataTable("tabelMenu");
         private void Admin_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -60,17 +58,18 @@ namespace eRestaurant
                 MessageBox.Show("Mohon pilih baris data yang akan diupdate", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["noPesananDataGridViewTextBoxColumn"].Value.ToString() + " ?", "Hapus data terkonfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["noPesananDataGridViewTextBoxColumn"].Value.ToString() + " ?", "Hapus data terkonfirmasi", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 try
                 {
-                    conn.Open();
-                    sql = @"select * from st_delete(:_No_Pesanan)";
-                    cmd = new NpgsqlCommand(sql, conn);
+                    connect.conn.Open();
+                    connect.sql = @"select * from st_delete(:_No_Pesanan)";
+                    cmd = new NpgsqlCommand(connect.sql, connect.conn);
                     cmd.Parameters.AddWithValue("_No_Pesanan", r.Cells["noPesananDataGridViewTextBoxColumn"].Value.ToString());
                     if ((int)cmd.ExecuteScalar() == 1)
                     {
                         MessageBox.Show("Data Users berhasil dihapus", "Well Done!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        conn.Close();
+                        connect.conn.Close();
                         r = null;
                         LoadData();
                     }
@@ -96,9 +95,9 @@ namespace eRestaurant
         }
         private void LoadData()
         {
-            conn.Open();
+            connect.conn.Open();
             NpgsqlCommand comm = new NpgsqlCommand();
-            comm.Connection = conn;
+            comm.Connection = connect.conn;
             comm.CommandType = CommandType.Text;
             comm.CommandText = "select * from menu";
             NpgsqlDataReader dr = comm.ExecuteReader();
@@ -109,7 +108,7 @@ namespace eRestaurant
                 dgvData.DataSource = dt;
             }
             comm.Dispose();
-            conn.Close();
+            connect.conn.Close();
         }
 
         
