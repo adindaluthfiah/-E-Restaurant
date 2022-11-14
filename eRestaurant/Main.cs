@@ -8,25 +8,24 @@ namespace eRestaurant
 {
     public partial class Form1 : Form
     {
+        Data connectData = new Data();
         public static int subTotal;
         public static double totalSemua;
-        //DataSetTableAdapters.tabelMenuTableAdapter order = new DataSetTableAdapters.tabelMenuTableAdapter();
+        private DataGridViewRow r;
+        private DataTable dt;
+        public static NpgsqlCommand cmd;
 
         public Form1()
         {
             InitializeComponent();
+            Data connection1 = new Data();
+
         }
-        private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=082002;Database=e-Rest";
-        public DataTable dt;
-        public static NpgsqlCommand cmd;
-        private string sql = null;
-        private DataGridViewRow r;
+        
+       
         private void Main_Load(object sender, EventArgs e)
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            conn = new NpgsqlConnection(connstring);
-            //NoOtomatis();
         }
         private void btnNewOrder_Click(object sender, EventArgs e)
         {
@@ -61,9 +60,9 @@ namespace eRestaurant
                 {
                     try
                     {
-                        conn.Open();
-                        sql = @"select * from st_insert(:_Nama,:_Scramble_Toast,:_Bacon_DoubleCT,:_Avo_Toast,:_Shrimp_Toast,:_Total)";
-                        cmd = new NpgsqlCommand (sql, conn);
+                        connectData.conn.Open();
+                        connectData.sql = @"select * from st_insert(:_Nama,:_Scramble_Toast,:_Bacon_DoubleCT,:_Avo_Toast,:_Shrimp_Toast,:_Total)";
+                        cmd = new NpgsqlCommand (connectData.sql, connectData.conn);
                         cmd.Parameters.AddWithValue("_Nama", tbNama.Text);
                         cmd.Parameters.AddWithValue("_Scramble_Toast", tbPesan1.Text);
                         cmd.Parameters.AddWithValue("_Bacon_DoubleCT", tbPesan2.Text);
@@ -74,7 +73,7 @@ namespace eRestaurant
                         if((int)cmd.ExecuteScalar() == 1)
                         {
                             MessageBox.Show("Pesanan anda telah ditambahkan ke antrian, Silahkan lanjutkan pembayaran anda ke kasir");
-                            conn.Close();
+                            connectData.conn.Close();
                         }
                         
                     }
