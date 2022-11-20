@@ -14,11 +14,8 @@ namespace eRestaurant
             long hitung;
             string urutan = (Properties.Settings.Default.MenuConnectionString);
             conn = new NpgsqlConnection(connstring);
-            SqlConnection con = new SqlConnection(urutan);
             con.Open();
             string query = "Select Max (No_Pesanan) from tabelMenu";
-            SqlCommand cmd = new SqlCommand(query, con);
-            SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 string val = dr[0].ToString();
