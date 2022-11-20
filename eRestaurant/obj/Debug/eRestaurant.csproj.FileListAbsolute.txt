@@ -371,3 +371,13 @@ C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\bin\Debug\ru\Microsoft.Rep
 C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.csproj.CopyComplete
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.csproj.AssemblyReference.cache
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.csproj.SuggestedBindingRedirects.cache
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.Admin.resources
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.LoginForm.resources
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.Properties.Resources.resources
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.Form1.resources
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.csproj.GenerateResource.cache
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.csproj.CoreCompileInputs.cache
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.exe
+D:\SEMESTER 5\projun\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.pdb
