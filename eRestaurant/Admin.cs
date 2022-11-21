@@ -16,11 +16,12 @@ namespace eRestaurant
 {
     public partial class Admin : Form
     {
-        private NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e-Restaurant");
+        private NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e_rest");
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
         private DataGridViewRow r;
+
 
         public Admin()
         {
@@ -100,7 +101,7 @@ namespace eRestaurant
                 MessageBox.Show("Mohon pilih baris data yang akan diupdate", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["_no_pesanan"].Value.ToString() + " ?", "Hapus data terkonfirmasi",
+            if (MessageBox.Show("Apakah benar anda ingin menghapus data " + r.Cells["_No_Pesanan"].Value.ToString() + " ?", "Hapus data terkonfirmasi",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 try
                 {

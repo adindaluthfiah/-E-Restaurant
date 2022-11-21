@@ -147,7 +147,7 @@ namespace eRestaurant
             this.btnDelete.Image = null;
             this.btnDelete.ImageSize = new System.Drawing.Size(24, 24);
             this.btnDelete.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnDelete.Location = new System.Drawing.Point(488, 98);
+            this.btnDelete.Location = new System.Drawing.Point(542, 96);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(58)))), ((int)(((byte)(97)))));

@@ -152,7 +152,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NoPesanan.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Total_pesan.cs">
       <SubType>Form</SubType>

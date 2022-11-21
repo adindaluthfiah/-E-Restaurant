@@ -11,7 +11,7 @@ namespace eRestaurant
 {
     class Data
     {
-        public NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e-Restaurant");
+        public NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e_rest");
         public string sql = null;
 
         private DataGridViewRow r;

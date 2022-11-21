@@ -22,6 +22,17 @@ namespace eRestaurant
         private void Main_Load(object sender, EventArgs e)
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            connectData.conn.Open();
+            connectData.sql = "select max(No_Pesanan) from menu";
+            cmd = new NpgsqlCommand(connectData.sql, connectData.conn);
+
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                tbNoPesanan.Text = dr.GetValue(0).ToString();
+
+            }
+            connectData.conn.Close();
         }
         private void btnNewOrder_Click(object sender, EventArgs e)
         {
@@ -138,5 +149,6 @@ namespace eRestaurant
             LoginForm main = new LoginForm();
             main.Show();
         }
+
     }
 }

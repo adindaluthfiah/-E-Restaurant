@@ -76,13 +76,13 @@ namespace eRestaurant
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.gunaGradient2Panel7 = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.tbNoPesanan = new System.Windows.Forms.TextBox();
             this.lblNo_Pesanan = new Guna.UI.WinForms.GunaLabel();
             this.tbNama = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNama = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnAdmin = new Guna.UI.WinForms.GunaLinkLabel();
+            this.tbNoPesanan = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
@@ -720,21 +720,6 @@ namespace eRestaurant
             this.gunaGradient2Panel7.Size = new System.Drawing.Size(331, 5);
             this.gunaGradient2Panel7.TabIndex = 39;
             // 
-            // tbNoPesanan
-            // 
-            this.tbNoPesanan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNoPesanan.BackColor = System.Drawing.Color.White;
-            this.tbNoPesanan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNoPesanan.Cursor = System.Windows.Forms.Cursors.No;
-            this.tbNoPesanan.Enabled = false;
-            this.tbNoPesanan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.tbNoPesanan.Location = new System.Drawing.Point(842, 92);
-            this.tbNoPesanan.Name = "tbNoPesanan";
-            this.tbNoPesanan.ReadOnly = true;
-            this.tbNoPesanan.Size = new System.Drawing.Size(171, 19);
-            this.tbNoPesanan.TabIndex = 38;
-            this.tbNoPesanan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // lblNo_Pesanan
             // 
             this.lblNo_Pesanan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -817,6 +802,21 @@ namespace eRestaurant
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdmin.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(144)))), ((int)(((byte)(196)))));
             this.btnAdmin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnAdmin_LinkClicked);
+            // 
+            // tbNoPesanan
+            // 
+            this.tbNoPesanan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNoPesanan.BackColor = System.Drawing.Color.White;
+            this.tbNoPesanan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNoPesanan.Cursor = System.Windows.Forms.Cursors.No;
+            this.tbNoPesanan.Enabled = false;
+            this.tbNoPesanan.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tbNoPesanan.Location = new System.Drawing.Point(842, 92);
+            this.tbNoPesanan.Name = "tbNoPesanan";
+            this.tbNoPesanan.ReadOnly = true;
+            this.tbNoPesanan.Size = new System.Drawing.Size(171, 19);
+            this.tbNoPesanan.TabIndex = 38;
+            this.tbNoPesanan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -909,7 +909,6 @@ namespace eRestaurant
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
-        public System.Windows.Forms.TextBox tbNoPesanan;
         public System.Windows.Forms.TextBox tbNama;
         public System.Windows.Forms.TextBox tbPesan1;
         public System.Windows.Forms.TextBox tbPesan4;
@@ -928,5 +927,6 @@ namespace eRestaurant
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel7;
         private System.Windows.Forms.Button button1;
         private Guna.UI.WinForms.GunaLinkLabel btnAdmin;
+        public System.Windows.Forms.TextBox tbNoPesanan;
     }
 }
