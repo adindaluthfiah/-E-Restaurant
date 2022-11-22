@@ -13,7 +13,7 @@ namespace eRestaurant
 {
     internal class Data : CRUD
     {
-        public NpgsqlConnection conn = new NpgsqlConnection("Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e-Rest");
+        public NpgsqlConnection conn = new NpgsqlConnection("Host=e-restaurant.postgres.database.azure.com;Port=5432;Username=postgresql@e-restaurant;Password=Postgres123;Database=postgres;sslmode=require");
         public string sql = null;
         public static NpgsqlCommand cmd;
         private DataGridViewRow r;

@@ -570,3 +570,7 @@ C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.cspr
 C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.csproj.CopyComplete
 C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.exe
 C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.pdb
+C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\bin\Debug\eRestaurant.exe.manifest
+C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\bin\Debug\eRestaurant.application
+C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.exe.manifest
+C:\Users\ASUS\Desktop\Junpro\E-Restaurant\eRestaurant\obj\Debug\eRestaurant.application

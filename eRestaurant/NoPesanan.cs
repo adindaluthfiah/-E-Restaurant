@@ -10,7 +10,7 @@ namespace eRestaurant
         {
 
             long hitung;
-            string urutan = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=e-Rest";
+            string urutan = "Host=e-restaurant.postgres.database.azure.com;Port=5432;Username=postgresql@e-restaurant;Password=Postgres123;Database=postgres;sslmode=require";
             NpgsqlConnection con = new NpgsqlConnection(urutan);
             con.Open();
             string query = "Select Max (No_Pesanan) from Menu";
