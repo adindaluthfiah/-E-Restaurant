@@ -6,3 +6,17 @@ Ketua Kelompok : Maria Anastasia Tambunan - 20/460551/TK/511
 
 - Anggota 1 : Adinda Luthfiah S - 20/463587/TK/51579
 - Anggota 2 : Wardatul Radhiyyah - 20/456381/TK/50511
+
+# Panduan Menggunakan Aplikasi E-restaurant 
+1. Mengganti connection string local host berdasarkan database postgre masing masing, contohnya seperti gambar di bawah
+  ![image](https://user-images.githubusercontent.com/79191854/203219352-bad928f9-dc03-4fc7-9a69-c4cd4095a0de.png)
+2.kemudian User bisa menjalankan program
+3.User memasukkan nama dan jumlah pesanan sesuai menu yang tersedia, kemudian klik add order
+4.Nomor pesanan akan ter generate saat user melakukan add order
+5.Apabila User ingin membuat pesanan baru, user bisa klik button new order 
+6.Pada halaman Login, user disini posisinya sebagai admin, dapat melakukan log in dengan memasukkan username dan password yang telah di tetapkan
+7.Pada halaman admin, User dapat memilih data mana yang akan dihapus berdasarkan no pesanan yang ada, dengan memilih kolom no pesanan, kemudian tekan button delete     order, pesanan akan terhapus
+8.pada halaman Admin, User juga dapat melakukan pencarian pada search bar untuk mencari data pada database, dengan meinputkan nama dari customer
+9.Untuk keluar dari halaman admin, user dapat memilih tombol exit yang ada di pojok kanan atas jendela.
+
+  
